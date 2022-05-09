@@ -1,75 +1,54 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+      <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      --><link type="text/css" rel="stylesheet" href="style.css" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>jeu du dé</title>
+  </head>
 
-    <title>jeux</title>
-</head>
+  <body>
+    <div class="container "> <!--clearfix-->
+      <div class="row player-1-panel active"> <!--active quand il joue --> 
+      <div class="player-name" id="name-1">Player 1 </div>
+      <div class="player-score" id="score-1"> 0</div>
+      <div class="player-current-box">
+        <div class="player-current">Current</div>
+        <div class="player-current-score" id="current-1"> 14</div>
+      </div>
+</div>
 
-<body>
-    <div class="nouveaujeu">
-        <h1><img src="icons8-plus-30.png" alt="icon">NEW GAME</h1>
-        <!--cest un button ajouter une icone -->
+<div class="row player-2-panel ">
+  <div class="player-name" id="name-2">Player 2 </div>
+  <div class="player-score" id="score-2"> 20</div>
+  <div class="player-current-box">
+    <div class="player-current">Current</div>
+    <div class="player-current-score" id="current-2"> 14</div>
+  </div>
+</div>
+
+<button class="btn btn-outline-dark btn-new"><i class="bi bi-plus-circle"></i>
+  New game 
+</button>
+
+<button class="btn btn-outline-dark btn-roll"><i class="bi bi-arrow-counterclockwise"></i>
+  Roll
+</button>
+<button class="btn btn-outline-dark btn-hold"><i class="bi bi-download"></i>
+  Hold
+</button>
     </div>
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-4">
-
-                <div class="col-1"> <span class="player1"> PLAYER 1</span>
-                    <div class="score-temp-1"> 20 </div>
-                    <div class="boxparent">
-                    <div class="box1"> current <br> 0<div class="score-global-1"></div> </div>
-                </div>
-                </div>
-
-
-
-            </div>
-
-            <div class="col-4">
-
-                <div class="dicebox">
-                    <div id="dice"> <img  src="dé-4.png" class="dé"> </div>
-                    </div>
-                    <div class="options">
-                    <div class="rolldice" > <button type="button" class="btn " ><h4><img src="iconstourner-30.png"  alt =" icon" > dice</h4> </button></div>
-            
-                <div class="hold"> <button type="button" class="btn btn-outline-dark" id="btn-hold"><h4><img src="icons8-30.png" alt="icon" > hold  </h4></button></div>
-                </div>
-
-            </div>
-
-            <div class="col-4">
-
-                <div class="player2">
-                    <span id="player2">PLAYER 2 </span>
-                    <div id="scoretemporairej2">
-                        40
-                        </div>
-                        <div class="boxparent">
-                        <div class="box2"> current <br> 0</div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-
-    </div>
-
-    <script src=" script.js" > </script>
+    
+<img src="dé-6.png" alt="dé" class="dice">
+<script src="app.js"></script>
+</div>
 </body>
-
 </html>
